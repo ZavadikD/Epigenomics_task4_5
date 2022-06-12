@@ -2,11 +2,11 @@
 
 Please, find the commands used to coplete the task below. You can also find python and R script that were used in task5 in this repository. I also provide archives with regulatory_elements and ATAC_seq files.
 
-####entering docker
+#entering docker
 sudo su
 docker run -v $PWD:$PWD -w $PWD --rm -it dgarrimar/epigenomics_course
 
-##########TASK4
+# TASK4
 
 mkdir ATAC-seq_new
 cd ./ATAC-seq_new/
@@ -23,11 +23,11 @@ mkdir ./atac-nf
 
 mkdir ./data/fastq.files
 
-##making directories for bed/bigwig files, inside ATAC-seq_new directory
+#making directories for bed/bigwig files, inside ATAC-seq_new directory
 
 mkdir data/bigBed.files data/bigWig.files
 
-##getting bigbed peak files
+#getting bigbed peak files
 
 grep -F ATAC-seq metadata.tsv |\
 grep -F "bigBed_narrowPeak" |\
@@ -44,9 +44,9 @@ done
 
 
 ##check the integrity of bed files
-# retrieve original MD5 hash from the metadata
-# compute MD5 hash on the downloaded files 
-# make sure there are no files for which original and computed MD5 hashes differ
+#retrieve original MD5 hash from the metadata
+#compute MD5 hash on the downloaded files 
+#make sure there are no files for which original and computed MD5 hashes differ
 
 for file_type in bigBed; do
   ../bin/selectRows.sh <(cut -f1 analyses/"$file_type".*.ids.txt) metadata.tsv | cut -f1,46 > data/"$file_type".files/md5sum.txt
@@ -113,7 +113,7 @@ while read filename tissue; do
 done
 
 
-###########TASK5
+# TASK5
 
 #Task1
 
@@ -158,9 +158,9 @@ done
 
 wc -l ./data/acbigBed.files/*
 
-#   8668 ./data/acbigBed.files/ENCFF872UHN.bigBed
-#   9162 ./data/acbigBed.files/ENCFF977LBD.bigBed
-#  17830 total
+#8668 ./data/acbigBed.files/ENCFF872UHN.bigBed
+#9162 ./data/acbigBed.files/ENCFF977LBD.bigBed
+#17830 total
 
 
 
@@ -185,9 +185,9 @@ done
 
 wc -l ./data/me1bigBed.files/*
 
-#   15883 ./data/me1bigBed.files/ENCFF724ZOF.bigBed
-#   12362 ./data/me1bigBed.files/ENCFF844XRN.bigBed
-#   84735 total
+#15883 ./data/me1bigBed.files/ENCFF724ZOF.bigBed
+#12362 ./data/me1bigBed.files/ENCFF844XRN.bigBed
+#84735 total
 
 
 
@@ -279,4 +279,6 @@ Rscript ./R_epigenomics.R > task7mean_median_out.txt
 
 cat task7mean_median_out.txt
 
+#[1] "the median distance between the gene and the regulatory element in sigmoid colon is: 2020 bp; the mean distance is: 5457.99481865285 bp"
+#[1] "the median distance between the gene and the regulatory element in stomach is: 2168 bp; the mean distance is: 6731.58851674641 bp"
 
