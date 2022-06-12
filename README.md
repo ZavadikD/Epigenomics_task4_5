@@ -1,6 +1,6 @@
 # Epigenomics_task4_5
 
-Please, find the commands used to complete the task below. You can also find python and R script that were used in task5 in this repository. I also provide archives with regulatory_elements files. 
+Please, find the commands used to complete the task below. You can also find python and R script that were used in task5 in this repository. I also provide archives with regulatory_elements (task5) and ATAC-seq_new (task4) files. Note just because of size limit a single file with annotations was removed from the Task4 archive. It can be retrieved by the link "https://www.encodeproject.org/files/gencode.v24.primary_assembly.annotation/@@download/gencode.v24.primary_assembly.annotation.gtf.gz" .
 
 #entering docker
 
