@@ -1,6 +1,6 @@
 # Epigenomics_task4_5
 
-Please, find the commands used to complete the task below. You can also find python and R script that were used in task5 in this repository. I also provide archives with regulatory_elements and ATAC_seq files. 
+Please, find the commands used to complete the task below. You can also find python and R script that were used in task5 in this repository. I also provide archives with regulatory_elements files. 
 
 #entering docker
 
